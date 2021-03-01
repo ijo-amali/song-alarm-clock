@@ -8,7 +8,7 @@ r = requests.get(url)
 
 print("Get request: %s\n" % r.text)
 
-r = requests.post(url, data={"url": "kzVVVNT4ic4"})
+r = requests.post(url, data={"url": "SEND_POST_TEST"})
 
 print("Post request: %s\n" % r.text)
 print(r)

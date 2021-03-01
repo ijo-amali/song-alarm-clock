@@ -20,7 +20,7 @@ def result():
     # print(request.form["url"])
 
     f = open("youtube-IDs.txt", "a")
-    f.write("\n%s" % url)
+    f.write("%s\n" % url)
     f.close()
 
     return 'Request received! Url sent was %s' % url
