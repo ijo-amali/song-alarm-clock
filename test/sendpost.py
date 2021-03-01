@@ -4,7 +4,7 @@ URL = 'http://10.0.0.185:8080'
 
 r = requests.get(URL)
 
-print(r.text + "\n\n")
+print(r.text + "\n")
 
 r = requests.post(URL, data={"url": "kzVVVNT4ic4"})
 

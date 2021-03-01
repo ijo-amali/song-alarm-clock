@@ -13,7 +13,9 @@ def get():
 def result():
     url = request.form["url"]
 
-    print(url)
+    print(request)
+    print(request.form)
+    print(request.form["url"])
 
     f = open("youtube-IDs.txt", "a")
     f.write("\n%s" % url)
