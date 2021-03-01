@@ -1,14 +1,14 @@
 import requests
 
-print('Testing~\n\n')
+print('Testing~\n')
 
-URL = 'http://10.0.0.185:8080'
+url = 'http://10.0.0.185:8080'
 
-r = requests.get(URL)
+r = requests.get(url)
 
 print("Get request: %s\n" % r.text)
 
-r = requests.post(URL, data={"url": "kzVVVNT4ic4"})
+r = requests.post(url, data={"url": "kzVVVNT4ic4"})
 
 print("Post request: %s\n" % r.text)
 print(r)
