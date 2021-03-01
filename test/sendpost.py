@@ -1,9 +1,11 @@
 import requests
 
-r = requests.get("http://localhost:8080")
+URL = 'http://10.0.0.185:8080'
+
+r = requests.get(URL)
 
 print(r.text)
 
-r = requests.post("http://localhost:8080", data={'url': "kzVVVNT4ic4"})
+# r = requests.post(URL, data={'url': "kzVVVNT4ic4"})
 
-print(r.text)  # displays the result body.
+# print(r.text)  # displays the result body.
