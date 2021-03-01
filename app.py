@@ -5,11 +5,18 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def get():
-    return 'POST request, not GET'
+    f = open("youtube-IDs.txt")
+    return f.read()
 
 
 @app.route('/', methods=['POST'])
 def result():
     url = request.form['url']
+
     print(url)
-    return 'Hello world! Url sent was %s' % url
+
+    f = open("youtube-IDs.txt", "a")
+    f.write("\n%s" % url)
+    f.close()
+
+    return 'Request received! Url sent was %s' % url
