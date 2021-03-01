@@ -1,6 +1,8 @@
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/', methods=['GET'])
@@ -10,7 +12,7 @@ def get():
 
 
 @app.route('/', methods=['POST'])
-@crossdomain(origin="http://song-clock.glitch.me")
+@cross_domain("http://song-clock.glitch.me")
 def result():
     url = request.form["url"]
 
