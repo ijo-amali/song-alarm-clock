@@ -10,6 +10,7 @@ def get():
 
 
 @app.route('/', methods=['POST'])
+@crossdomain(origin="http://song-clock.glitch.me")
 def result():
     url = request.form["url"]
 
