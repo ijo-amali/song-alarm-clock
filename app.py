@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources="http://song-clock.glitch.me")
+CORS()
 
 
 @app.route('/', methods=['GET'])
