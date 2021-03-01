@@ -2,8 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+CORS(app, "http://song-clock.glitch.me")
 
 
 @app.route('/', methods=['GET'])
@@ -13,7 +12,6 @@ def get():
 
 
 @app.route('/', methods=['POST'])
-@cross_domain("http://song-clock.glitch.me")
 def result():
     url = request.form["url"]
 
