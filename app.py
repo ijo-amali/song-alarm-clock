@@ -11,7 +11,7 @@ def get():
 
 @app.route('/', methods=['POST'])
 def result():
-    url = request.form['url']
+    url = request.form
 
     print(url)
 
