@@ -20,7 +20,3 @@ def result():
     f.close()
 
     return 'Request received! Url sent was %s' % url
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
