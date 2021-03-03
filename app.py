@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS()
+CORS(app, "song-clock.glitch.me")
 
 id_file = "youtube-IDs.txt"
 

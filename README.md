@@ -4,6 +4,7 @@ Alarm clock that randomly selects user-chosen songs
 ## To run:
 
 ```
+export FLASK_APP=app.py
 python -m flask run -p <your port> -h 0.0.0.0
 ```
 
