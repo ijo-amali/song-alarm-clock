@@ -4,11 +4,19 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS()
 
+id_file = "youtube-IDs.txt"
+
 
 @app.route('/', methods=['GET'])
 def get():
-    f = open("youtube-IDs.txt")
-    return f.read()
+    try:
+        f = open(id_file)
+        response = f.read()
+        f.close()
+        return response
+    except:
+        open(id_file, "x")
+        return ''
 
 
 @app.route('/', methods=['POST'])
@@ -17,7 +25,7 @@ def result():
 
     print(url)
 
-    f = open("youtube-IDs.txt", "a")
+    f = open(id_file, "a")
     f.write("%s\n" % url)
     f.close()
 

@@ -2,7 +2,8 @@ import requests
 
 print('Testing~\n')
 
-url = 'http://10.0.0.185:8080'
+# url = 'http://10.0.0.185:8080'
+url = 'http://localhost:8080'
 
 r = requests.get(url)
 

@@ -1,6 +1,12 @@
 # song-alarm-clock
 Alarm clock that randomly selects user-chosen songs
 
+## To run:
+
+```
+python -m flask run -p <your port> -h 0.0.0.0
+```
+
 TODO:
 
 ## Always running script:
